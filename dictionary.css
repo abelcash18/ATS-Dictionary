@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    background: linear-gradient(to right, #1f2937, #111827);
+    font-family: "Cuprum", sans-serif;
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3em;
+    padding: 6% 10%;
+}
+.header h1 {
+    background: linear-gradient(50deg, #2563eb, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+}
+.header p {
+    font-size: 1.8em;
+    color: #acaaaa;
+}
+.header .inputBox {
+    position: relative;
+    width: 100%;
+}
+.header input {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #656464;
+    outline: none;
+    border-radius: 8px;
+    background-color: #1f2937;
+    color: white;
+}
+.header input:focus {
+    border: 1px solid #2563eb;
+}
+.header button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    outline: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+.resultHeader {
+    color: white;
+    padding: 0% 12% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultHeader div:first-child h1 {
+    font-size: 3em;
+}
+.resultHeader div:last-child {
+    background-color: #283546;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    gap: 0.5em;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+.tableSection {
+    padding: 0% 8% 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+table {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #656464;
+    border-collapse: collapse;
+}
+table td, table th {
+    color: #acaaaa;
+    font-weight: 400;
+    padding: 20px;
+    border-bottom: 1px solid #656464;
+    border-right: 1px solid #656464;
+}
+
+@media screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 2em;
+        margin-top: 30px;
+    }
+    .header p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .resultHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .resultHeader div:first-child h1 {
+        font-size: 2em;
+    }
+    .resultHeader div:last-child {
+        margin-top: 10px;
+    }
+    table td, table th {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    #installBtn{
+        display: block;
+    }
+}
+
+.installbtnDIV{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#installBtn{
+    border: none;
+    outline: none;
+    background: linear-gradient(50deg, #2563eb, #fff);
+    padding: 10px 30px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}

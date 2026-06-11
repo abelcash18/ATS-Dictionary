@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>LingoLookup | Free Dictionary App – Definitions, Meanings & Pronunciations</title>
+    <meta name="description" content="LingoLookup is a free online dictionary app that helps you find word definitions, meanings, origins, and pronunciations instantly. PWA supported.">
+    <meta name="keywords" content="dictionary app, online dictionary, word meanings, word definitions, PWA dictionary, vocabulary builder, pronunciation app">
+    <meta name="keywords" content="best dictionary app in the world">
+    <meta name="author" content="LingoLookup">
+    <link rel="canonical" href="https://lingodictionary.netlify.app/">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" href="./icon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/06f2b8b551.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dictionary.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LingoLookup",
+        "operatingSystem": "Web",
+        "applicationCategory": "EducationApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "description": "Free online dictionary app to search word definitions, origins, and pronunciation. Works offline as a PWA.",
+        "url": "https://lingodictionary.netlify.app"
+        }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2631475611861063"
+     crossorigin="anonymous"></script>
+     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+</head>
+<body>
+    <amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-2631475611861063">
+    </amp-auto-ads>
+    <div class="installbtnDIV">
+        <button id="installBtn">Install App</button>
+    </div>
+    <amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-2631475611861063"
+     data-ad-slot="9548829132"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+<div class="header">
+    <h1>LingoLookup</h1>
+    <p>Explore word Definition, Semantics Meaning, Origins and Pronunciation in seconds!</p>
+    <div class="inputBox">
+        <input type="text" placeholder="Search for a word..." id="userSearch" autofocus />
+        <button onclick="searchWord()" id="search">Search</button>
+    </div>
+</div>
+
+<div>
+    <div class="resultHeader">
+        <div>
+            <h1 id="wordSearch">Loading...</h1>
+        </div>
+        <div id="audioContainer">
+            <i id="playWord" class="fa-solid fa-volume-low"></i>
+            <p id="phoneticText">Sound</p>
+        </div>
+    </div>
+
+    <div class="tableSection">
+        <table>
+            <thead>
+                <tr>
+                    <th>Part of Speech</th>
+                    <th>Meaning</th>
+                    <th>Semantics</th>
+                </tr>
+            </thead>
+            <tbody id="partSpeech">
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="text-align:center; padding: 20px; font-size: 14px;">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="about.html">About</a>
+    </footer>
+
+</div>
+
+
+<script src="./dictionary.js"></script>
+
+
+</body>
+</html>
