@@ -128,13 +128,13 @@ function askNotificationPermission(){
         })
     }
 }
-// const notifyMe =() =>{
-//     if(Notification.permission==='granted'){
-//         new Notification('thanks for clicking!',{
-//             body: 'You just clicked the button.',
-//             icon: 'https://example.com/icon.png'
-//         })
-//     }else{
-//         alert('please alert notification to receive alerts')
-//     }
-// }
+ const notifyMe =() =>{
+     if(Notification.permission==='granted'){
+         new Notification('thanks for clicking!',{
+             body: 'You just clicked the button.',
+             icon: 'https://example.com/icon.png'
+         })
+     }else{
+         alert('please alert notification to receive alerts')
+     }
+ }
