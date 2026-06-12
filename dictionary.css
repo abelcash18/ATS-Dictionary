@@ -3,12 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --bg1:#1f2937;
+    --bg2:#111827;
+    --brand:#2563eb;
+    --muted:#acaaaa;
+    --border:#656464;
+}
+
 body {
     overflow-x: hidden;
     width: 100vw;
-    background: linear-gradient(to right, #1f2937, #111827);
+    background: linear-gradient(to right, var(--bg1), var(--bg2));
     font-family: "Cuprum", sans-serif;
+    color: #fff;
 }
+
+:focus-visible{
+    outline: 3px solid color-mix(in srgb, var(--brand) 70%, white 30%);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+    *{transition:none !important; scroll-behavior:auto !important;}
+}
+
 .header {
     width: 100%;
     display: flex;

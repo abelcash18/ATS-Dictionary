@@ -21,7 +21,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icon.jpg">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+        .srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
     </style>
+
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -40,38 +42,28 @@
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2631475611861063"
      crossorigin="anonymous"></script>
-     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 </head>
 <body>
-    <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-2631475611861063">
-    </amp-auto-ads>
     <div class="installbtnDIV">
-        <button id="installBtn">Install App</button>
+        <button id="installBtn" type="button" aria-label="Install Ats Dictionary">Install App</button>
     </div>
-    <amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-2631475611861063"
-     data-ad-slot="9548829132"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
 <div class="header">
     <h1>Ats Dictionary</h1>
     <p>Explore word Definition, Semantics Meaning, Origins and Pronunciation in seconds!</p>
-    <div class="inputBox">
-        <input type="text" placeholder="Search for a word..." id="userSearch" autofocus />
-        <button onclick="searchWord()" id="search">Search</button>
-    </div>
+    <form class="inputBox" id="searchForm" autocomplete="off">
+        <label for="userSearch" class="srOnly">Search for a word</label>
+        <input type="text" placeholder="Search for a word..." id="userSearch" autofocus required />
+        <button id="search" type="submit">Search</button>
+    </form>
 </div>
 
-<div>
+<main>
+    <div>
     <div class="resultHeader">
         <div>
-            <h1 id="wordSearch">Loading...</h1>
+            <h1 id="wordSearch" aria-live="polite">Loading...</h1>
         </div>
-        <div id="audioContainer">
+        <div id="audioContainer" aria-live="polite">
             <i id="playWord" class="fa-solid fa-volume-low"></i>
             <p id="phoneticText">Sound</p>
         </div>
@@ -97,10 +89,8 @@
     </footer>
 
 </div>
+</main>
 
-
-<script src="./dictionary.js"></script>
-
-
+<script src="./dictionary.js" defer></script>
 </body>
 </html>
